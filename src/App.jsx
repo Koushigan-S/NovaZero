@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import TabsRouter from "./components/TabsRouter";
-import Snowfall from "react-snowfall";
+import Snowfall from "./components/Snowfall";
+
 import useNightMode from "./utils/useNightMode";
 import "./index.css";
 
