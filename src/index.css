@@ -1,0 +1,368 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+@keyframes glowAura {
+  0% {
+    box-shadow: 0 0 10px #3ab7f2, 0 0 20px #8840ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #3ab7f2, 0 0 30px #8840ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #3ab7f2, 0 0 20px #8840ff;
+  }
+}
+
+.animate-glow {
+  animation: glowAura 2s infinite ease-in-out;
+}
+@keyframes glowAura {
+  0% {
+    box-shadow: 0 0 10px #3ab7f2, 0 0 20px #8840ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #3ab7f2, 0 0 30px #8840ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #3ab7f2, 0 0 20px #8840ff;
+  }
+}
+
+.animate-glow {
+  animation: glowAura 2s infinite ease-in-out;
+}
+
+@keyframes domainBurst {
+  0%, 100% {
+    background-position: center;
+    background-size: 200% 200%;
+  }
+  50% {
+    background-position: 60% 40%;
+    background-size: 230% 230%;
+  }
+}
+
+.animate-domain {
+  background: radial-gradient(circle at center, #3ab7f2 0%, #1a1a40 80%);
+  background-size: 200% 200%;
+  animation: domainBurst 8s infinite alternate ease-in-out;
+}
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+@keyframes streakPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-streak {
+  animation: streakPulse 0.5s ease-in-out;
+}
+.animate-streak {
+  animation: streakPulse 0.5s ease-in-out;
+  box-shadow: 0 0 5px #3ab7f2, 0 0 10px #3ab7f2;
+}
+@keyframes fadePulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.95);
+  }
+}
+
+.animate-fade {
+  animation: fadePulse 1s ease-in-out;
+}
+@keyframes reversePulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.85); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-rewind {
+  animation: reversePulse 0.5s ease-in-out;
+}
+body.night-mode {
+  background-color: #0a0a12;
+  color: #e0e0e0;
+}
+
+.night-mode .animate-rewind {
+  opacity: 0.5;
+  filter: blur(1px);
+  animation-duration: 3s;
+}
+
+.night-mode .snowfall {
+  opacity: 0.4;
+  animation-duration: 10s;
+}
+
+.night-mode .lottie-flame {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 5px #00bfff);
+}
+@keyframes flame-flicker {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 5px #00bfff);
+  }
+  50% {
+    transform: scale(1.05) rotate(1deg);
+    filter: drop-shadow(0 0 10px #00f0ff);
+  }
+}
+
+.lottie-flame {
+  animation: flame-flicker 2s infinite ease-in-out;
+}
+.snowfall {
+  animation: snow-float 5s linear infinite;
+}
+
+body.night-mode .snowfall {
+  animation-duration: 12s;
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+@keyframes snow-float {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+.snowfall {
+  animation: snow-float 5s linear infinite;
+}
+
+body.night-mode .snowfall {
+  animation-duration: 12s;
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 0.9s step-start infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-in-out forwards;
+}
+@keyframes fadeTab {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-fadeTab {
+  animation: fadeTab 0.5s ease-out both;
+}
+@keyframes auraPulse {
+  0% { box-shadow: 0 0 0px transparent; }
+  50% { box-shadow: 0 0 30px currentColor; }
+  100% { box-shadow: 0 0 0px transparent; }
+}
+
+.aura-blue {
+  animation: auraPulse 3s ease-in-out infinite;
+  color: #60a5fa; /* blue-400 */
+}
+.aura-red {
+  animation: auraPulse 2.5s ease-in-out infinite;
+  color: #f87171; /* red-400 */
+}
+.aura-green {
+  animation: auraPulse 3s ease-in-out infinite;
+  color: #34d399; /* green-400 */
+}
+.aura-gold {
+  animation: auraPulse 3s ease-in-out infinite;
+  color: #facc15; /* yellow-400 */
+}
+.aura-cursed {
+  animation: auraPulse 1.8s ease-in-out infinite;
+  color: #8b5cf6; /* purple-500 */
+}
+.aura-gray {
+  animation: auraPulse 3s ease-in-out infinite;
+  color: #d1d5db; /* gray-300 */
+}
+@keyframes fadeTab {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-fadeTab {
+  animation: fadeTab 0.5s ease-out both;
+}
+
+@keyframes auraPulse {
+  0% { box-shadow: 0 0 0 transparent; }
+  50% { box-shadow: 0 0 30px currentColor; }
+  100% { box-shadow: 0 0 0 transparent; }
+}
+
+.aura-blue   { animation: auraPulse 3s infinite; color: #60a5fa; }
+.aura-red    { animation: auraPulse 2.5s infinite; color: #f87171; }
+.aura-green  { animation: auraPulse 3s infinite; color: #34d399; }
+.aura-gold   { animation: auraPulse 3s infinite; color: #facc15; }
+.aura-cursed { animation: auraPulse 1.8s infinite; color: #8b5cf6; }
+.aura-gray   { animation: auraPulse 3s infinite; color: #d1d5db; }
+/* 🔌 Weekend Tab - electric violet aura */
+.aura-electric {
+  animation: auraPulse 3s infinite;
+  color: #c084fc; /* violet-400 */
+}
+
+/* ⌛ Weekly Tab - amber/tan time aura */
+.aura-time {
+  animation: auraPulse 2.8s infinite;
+  color: #fbbf24; /* amber-400 */
+}
+
+/* 🌕 Monthly Tab - cool lunar shimmer */
+.aura-lunar {
+  animation: auraPulse 3s infinite;
+  color: #93c5fd; /* blue-300 */
+}
+
+/* 🌌 Yearly Tab - galactic vibe */
+.aura-galaxy {
+  animation: auraPulse 3s infinite;
+  color: #38bdf8; /* sky-400 */
+}
+
+/* 🗿 Unlockables - gold relic aura */
+.aura-relic {
+  animation: auraPulse 3s infinite;
+  color: #fcd34d; /* yellow-300 */
+}
+.domain-aura {
+  box-shadow: 0 0 40px #0ff, 0 0 60px #a0f, 0 0 90px #0ff;
+}
+
+.aura-unlocked {
+  box-shadow: 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff;
+}
+
+.glow-border {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.domain-aura {
+  box-shadow: 0 0 40px #0ff, 0 0 60px #a0f, 0 0 90px #0ff;
+}
+
+.aura-unlocked {
+  box-shadow: 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff;
+}
+
+.glow-border {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
