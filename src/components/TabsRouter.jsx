@@ -1,15 +1,15 @@
 import React, { useState, useRef } from "react";
 
-import DailyTab from "./tabs/DailyTab";
-import WeeklyTab from "./tabs/WeeklyTab";
-import MonthlyTab from "./tabs/MonthlyTab";
-import YearlyTab from "./tabs/YearlyTab";
-import WorkoutTab from "./tabs/WorkoutTab";
-import DietTab from "./tabs/DietTab";
-import WeekendTab from "./tabs/WeekendTab";
-import QuotesTab from "./tabs/QuotesTab";
-import UnlockablesTab from "./tabs/UnlockablesTab";
-import ProfileTab from "./tabs/ProfileTab";
+import DailyTab from "./Tabs/DailyTab";
+import WeeklyTab from "./Tabs/WeeklyTab";
+import MonthlyTab from "./Tabs/MonthlyTab";
+import YearlyTab from "./Tabs/YearlyTab";
+import WorkoutTab from "./Tabs/WorkoutTab";
+import DietTab from "./Tabs/DietTab";
+import WeekendTab from "./Tabs/WeekendTab";
+import QuotesTab from "./Tabs/QuotesTab";
+import UnlockablesTab from "./Tabs/UnlockablesTab";
+import ProfileTab from "./Tabs/ProfileTab";
 
 
 const TabsRouter = () => {
