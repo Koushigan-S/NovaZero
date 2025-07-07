@@ -6,11 +6,11 @@ import MonthlyTab from "./tabs/MonthlyTab";
 import YearlyTab from "./tabs/YearlyTab";
 import WorkoutTab from "./tabs/WorkoutTab";
 import DietTab from "./tabs/DietTab";
+import WeekendTab from "./tabs/WeekendTab";
 import QuotesTab from "./tabs/QuotesTab";
 import UnlockablesTab from "./tabs/UnlockablesTab";
-import StreakWidget from "./StreakWidget";
-import WeekendTab from "./tabs/WeekendTab";
 import ProfileTab from "./tabs/ProfileTab";
+
 
 const TabsRouter = () => {
   const [activeTab, setActiveTab] = useState("Daily");
