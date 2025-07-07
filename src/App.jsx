@@ -7,10 +7,10 @@ import "./index.css";
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
-  const [mode, setMode] = useState("gojo"); // or sukuna
+  const [mode, setMode] = useState("gojo"); // or 'sukuna'
   const [showTyping, setShowTyping] = useState(false);
 
-  useNightMode(); // sets body.night-mode class
+  useNightMode(); // Adds .night-mode class to <body> at night
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
@@ -22,7 +22,7 @@ function App() {
 
     const timer2 = setTimeout(() => {
       setShowIntro(false);
-    }, 4800); // adjust based on video length
+    }, 4800); // match with intro video length
 
     return () => {
       clearTimeout(timer1);
@@ -32,12 +32,13 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-blackBg text-whiteText transition-all duration-300 overflow-hidden">
-      {/* ❄️ Snowfall behind everything */}
-      <div className="snowfall fixed inset-0 pointer-events-none z-0">
+
+      {/* ❄️ Snowfall effect (below everything) */}
+      <div className="fixed inset-0 pointer-events-none z-0">
         <Snowfall
-          snowflakeCount={60}
-          style={{ zIndex: 0 }}
-          speed={[0.5, document.body.classList.contains("night-mode") ? 1 : 2]}
+          snowflakeCount={80}
+          color="white"
+          style={{ opacity: 0.65 }}
         />
       </div>
 
@@ -59,7 +60,7 @@ function App() {
         </div>
       )}
 
-      {/* Main App Content */}
+      {/* 🌌 Main App Content */}
       {!showIntro && (
         <div className="relative z-10">
           <Header mode={mode} />
